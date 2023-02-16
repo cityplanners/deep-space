@@ -1,0 +1,3 @@
+[submodule "bones-engine"]
+	path = bones-engine
+	url = https://github.com/cityplanners/bones-engine
