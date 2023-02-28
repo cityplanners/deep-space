@@ -1,5 +1,6 @@
-use bones::add;
-
 fn main() {
-    println!("Hello, world! {}", add(1, 2));
+    println!("Hello, world! {}", bones::add(1, 2));
+
+    pollster::block_on(bones::run());
+
 }
