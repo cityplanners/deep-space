@@ -168,6 +168,7 @@ dependencies = [
  "fs_extra",
  "glob",
  "image",
+ "instant",
  "log",
  "reqwest",
  "tobj",
