@@ -159,6 +159,7 @@ name = "bones"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "bones_macros",
  "bytemuck",
  "cfg-if",
  "cgmath",
@@ -178,6 +179,10 @@ dependencies = [
  "wgpu",
  "winit",
 ]
+
+[[package]]
+name = "bones_macros"
+version = "0.0.1"
 
 [[package]]
 name = "bumpalo"
