@@ -1,15 +1,19 @@
-use bones::Component;
+use bones::prelude::*;
 
 fn main() {
-    println!("Hello, world! {}", bones::add(1, 2));
 
     #[derive(Component)]
-    struct Player;
+    struct Player {
+        health: u32
+    }
 
     // bones::Skeleton::new()
     //      .insert_resources()
     //      .insert_entities()
     //      .run()
 
-    pollster::block_on(bones::run());
+    pollster::block_on(
+        Skeleton::new()
+            .run()
+    );
 }
