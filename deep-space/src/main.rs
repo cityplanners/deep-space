@@ -1,19 +1,18 @@
 use bones::prelude::*;
 
+#[derive(Component)]
+struct Player {
+    health: u32
+}
+
 fn main() {
 
-    #[derive(Component)]
-    struct Player {
-        health: u32
-    }
+    Skeleton::new()
+        .add_system(print_hello)
+        .run()
 
-    // bones::Skeleton::new()
-    //      .insert_resources()
-    //      .insert_entities()
-    //      .run()
+}
 
-    pollster::block_on(
-        Skeleton::new()
-            .run()
-    );
+fn print_hello(world: &mut World) {
+    println!("Hello!");
 }
