@@ -1,6 +1,5 @@
 use bones::prelude::*;
 
-#[derive(Component)]
 struct Player {
     health: u32
 }
@@ -8,11 +7,15 @@ struct Player {
 fn main() {
 
     Skeleton::new()
-        .add_system(print_hello)
+        .add_init_system(init_world)
         .run()
 
 }
 
-fn print_hello(world: &mut World) {
-    println!("Hello!");
+fn init_world(world: &mut World) {
+    let entity = world.spawn_entity();
+    world.add_component_to_entity(entity, 
+        Player {
+            health: 100
+    });
 }
