@@ -18,4 +18,9 @@ fn init_world(world: &mut World) {
         Player {
             health: 100
     });
+
+    let cube = world.spawn_entity();
+    let mut model = world.load_model("cube.obj").unwrap();
+    model.render_method = RenderMethod::Draw_Model_Instanced;
+    world.add_component_to_entity(cube, model);
 }
