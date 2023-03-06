@@ -476,8 +476,10 @@ dependencies = [
 name = "deep-space"
 version = "0.1.0"
 dependencies = [
+ "anyhow",
  "bones",
- "pollster",
+ "fs_extra",
+ "glob",
 ]
 
 [[package]]
