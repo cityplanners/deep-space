@@ -1,4 +1,4 @@
-use bones::prelude::*;
+use bones::prelude::{*, light::PointLight};
 
 struct Player {
     health: u32
@@ -45,4 +45,9 @@ fn init_world(world: &mut World) {
     }).collect::<Vec<_>>();
 
     world.add_component_to_entity(cube, model);
+
+    let light = world.spawn_entity();
+    let mut point_light = PointLight::new();
+    point_light.uniform.color = [1.0, 0.0, 0.0];
+    world.add_component_to_entity(light, point_light);
 }
